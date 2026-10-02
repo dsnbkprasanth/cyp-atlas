@@ -1,0 +1,13 @@
+constituent,max_train_tanimoto,category
+hyperforin,0.862,near
+bergamottin,1.0,exact
+berberine,0.979,near
+curcumin,1.0,exact
+piperine,1.0,exact
+quercetin,1.0,exact
+egcg,1.0,exact
+silibinin,1.0,exact
+resveratrol,1.0,exact
+allicin,0.14,distant
+schisantherin_a,0.373,distant
+glycyrrhetinic_acid,0.253,distant

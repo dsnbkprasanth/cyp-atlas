@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software or the released datasets, please cite the following."
+title: "CYP-Atlas + HDI-GNN: mechanism-grounded herb–drug interaction risk across the phytochemical space"
+abstract: >-
+  Software and frozen data releases for predicting herb–drug interaction (HDI)
+  risk. CYP-Atlas trains per-enzyme CYP450/P-gp inhibition models on public
+  ChEMBL bioactivity data, predicts a CYP-inhibition atlas over ~18k IMPPAT
+  phytochemicals, and derives mechanistic, patient-specific HDI risk validated
+  against curated HDI pairs. HDI-GNN is a structure-based graph neural network
+  and baseline benchmark over a curated seed of cited herb–drug interactions.
+type: software
+authors:
+  # TODO: complete full legal name(s), affiliation, and ORCID before public release.
+  - given-names: Balu
+    email: dsnbkprasanth@gmail.com
+    # family-names: <ADD>
+    # affiliation: <ADD>
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+version: "1.1.0"
+date-released: "2026-10-02"
+license: MIT
+keywords:
+  - herb-drug interaction
+  - cytochrome P450
+  - P-glycoprotein
+  - phytochemicals
+  - IMPPAT
+  - ChEMBL
+  - cheminformatics
+  - graph neural network
+# repository-code: "https://github.com/<USER>/<REPO>"   # TODO: set after creating the repo
+# doi: "10.5281/zenodo.XXXXXXX"                          # TODO: set after Zenodo archival

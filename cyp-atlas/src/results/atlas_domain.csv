@@ -1,0 +1,4 @@
+metric,value
+atlas_compounds,17963
+in_domain_frac (>=0.30),0.376
+median_max_tanimoto,0.265

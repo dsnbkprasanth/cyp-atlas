@@ -1,0 +1,142 @@
+{
+  "release_version": "1.1.0",
+  "date": "2026-10-02",
+  "git_commit": "TBD (set at tag time)",
+  "python_version": "3.11",
+  "environment_files": [
+    "cyp-atlas/requirements.txt",
+    "hdi-gnn/requirements.txt",
+    "hdi-gnn/environment.yml"
+  ],
+  "random_seeds": {
+    "numpy_default_rng": 0,
+    "sklearn_random_state": 0,
+    "data_split_random_state": 0,
+    "cv_random_state": 0,
+    "bootstrap_rng": 0
+  },
+  "dataset_files": [
+    "data/frozen/ad_sweep.csv",
+    "data/frozen/cyp_atlas_domain.csv",
+    "data/frozen/cyp_atlas_full.csv",
+    "data/frozen/cyp_atlas_indomain.csv",
+    "data/frozen/cyp_labels_T10.csv",
+    "data/frozen/drug_cyp.csv",
+    "data/frozen/hdi_distant_only.csv",
+    "data/frozen/hdi_negsample_robustness.csv",
+    "data/frozen/hdi_route_weighted.csv",
+    "data/frozen/hdi_seed_expanded.csv",
+    "data/frozen/hdi_seed_original.csv",
+    "data/frozen/metrics_full.csv",
+    "data/frozen/metrics_threshold.csv",
+    "data/frozen/pgp_inhibitor_only.csv",
+    "data/frozen/validate_overall.csv",
+    "data/frozen/validate_per_drug.csv",
+    "data/frozen/validate_per_isoform.csv"
+  ],
+  "model_files": [
+    "cyp-atlas/src/models/cyp_models.pkl (EXCLUDED from git ~333MB; regenerate via train_cyp.py; see models/README.md)"
+  ],
+  "external_inputs": [
+    "imppat_phytocompounds.sdf (EXCLUDED ~43MB; see data/external/README.md)",
+    "ChEMBL v34 activity API (used by fetch_cyp.py / fetch_cyp_v2.py)"
+  ],
+  "configuration_files": [],
+  "checksums_file": "metadata/CHECKSUMS.sha256",
+  "entry_points": {
+    "cyp-atlas": [
+      {
+        "script": "src/fetch_cyp.py",
+        "role": "download CYP IC50 labels from ChEMBL (original, 10 uM)",
+        "out": "data/cyp_labels.csv",
+        "network": true
+      },
+      {
+        "script": "src/fetch_cyp_v2.py",
+        "role": "download CYP+P-gp labels (configurable threshold; P-gp inhibition-only)",
+        "out": "data/cyp_labels_T<X>.csv",
+        "network": true
+      },
+      {
+        "script": "src/train_cyp.py",
+        "role": "per-enzyme RF models + CV AUROC",
+        "out": "models/cyp_models.pkl, results/metrics.csv"
+      },
+      {
+        "script": "src/atlas.py",
+        "role": "predict CYP atlas over IMPPAT",
+        "in": "../../imppat_phytocompounds.sdf",
+        "out": "data/cyp_atlas.csv"
+      },
+      {
+        "script": "src/domain.py",
+        "role": "applicability domain (0.30 cutoff)",
+        "out": "data/cyp_atlas_domain.csv"
+      },
+      {
+        "script": "src/domain_v2.py",
+        "role": "AD-filtered atlas (0.40 primary) + sweep",
+        "out": "data/cyp_atlas_indomain.csv, results/revision/ad_sweep.csv"
+      },
+      {
+        "script": "src/risk.py",
+        "role": "mechanistic HDI risk, validated",
+        "in": "../../hdi-gnn/src/data/hdi_seed.csv",
+        "out": "results/risk_validation.csv"
+      },
+      {
+        "script": "src/benchmark.py",
+        "role": "model comparison + calibration/Brier",
+        "out": "results/benchmark.csv"
+      },
+      {
+        "script": "src/summarize.py",
+        "role": "atlas prevalence + risk CI/perm-p",
+        "out": "results/figures, summaries"
+      },
+      {
+        "script": "src/revision_analysis.py",
+        "role": "reviewer revision analyses (v1.0)",
+        "out": "results/revision/"
+      },
+      {
+        "script": "src/revision_v2.py",
+        "role": "threshold sensitivity, negative-sampling robustness, distant-only, route-weighted, P-gp inhibitor-only metrics",
+        "out": "results/revision/*"
+      },
+      {
+        "script": "src/validate_available.py",
+        "role": "headline validation on expanded seed (PGP route included; per-drug + per-isoform)",
+        "out": "results/revision/validate_*.csv, validate_summary.md"
+      },
+      {
+        "script": "src/run_revision.sh",
+        "role": "one-command rerun of the above",
+        "out": "results/revision/*, data/frozen/*"
+      }
+    ],
+    "hdi-gnn": [
+      {
+        "script": "src/train.py",
+        "role": "twin-GCN train/eval",
+        "in": "data/hdi.csv or sample"
+      },
+      {
+        "script": "src/build_dataset.py",
+        "role": "seed -> training CSV with assumed negatives",
+        "out": "data/hdi.csv"
+      },
+      {
+        "script": "src/analyze.py",
+        "role": "baselines vs GNN, CV + cold-herb, figures/tables",
+        "out": "results/"
+      },
+      {
+        "script": "src/screen.py",
+        "role": "score IMPPAT x drug pairs",
+        "in": "../imppat_phytocompounds.sdf",
+        "out": "results/screen_top_hits.csv"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+drug,enzyme
+midazolam,CYP3A4
+simvastatin,CYP3A4
+lovastatin,CYP3A4
+cyclosporine,CYP3A4,PGP
+tacrolimus,CYP3A4,PGP
+nifedipine,CYP3A4
+saquinavir,CYP3A4,PGP
+verapamil,CYP3A4,PGP
+diltiazem,CYP3A4
+warfarin,CYP2C9,CYP3A4,CYP1A2
+omeprazole,CYP2C19,CYP3A4
+tamoxifen,CYP2D6,CYP3A4
+digoxin,PGP

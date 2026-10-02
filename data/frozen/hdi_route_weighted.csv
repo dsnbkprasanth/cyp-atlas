@@ -1,0 +1,3 @@
+scoring_rule,n,AUROC,AUROC_95CI
+max,84,0.546,0.412-0.671
+mean,84,0.502,0.371-0.626

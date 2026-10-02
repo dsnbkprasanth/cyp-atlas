@@ -1,0 +1,52 @@
+constituent,drug,smiles_a,smiles_b,label,mechanism,pmid
+hyperforin,cyclosporine,CC(C)C(=O)[C@@]12C(=O)C(=C(O)[C@@](CC=C(C)C)(C[C@H](CC=C(C)C)[C@@]1(C)CCC=C(C)C)C2=O)CC=C(C)C,C/C=C/C[C@@H](C)[C@@H](O)[C@H]1C(=O)N[C@@H](CC)C(=O)N(C)CC(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)N1C,1,St John's wort hyperforin: CYP3A4/P-gp inducer,31742659
+hyperforin,warfarin,CC(C)C(=O)[C@@]12C(=O)C(=C(O)[C@@](CC=C(C)C)(C[C@H](CC=C(C)C)[C@@]1(C)CCC=C(C)C)C2=O)CC=C(C)C,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,CYP3A4/2C9 induction,10233198
+hyperforin,digoxin,CC(C)C(=O)[C@@]12C(=O)C(=C(O)[C@@](CC=C(C)C)(C[C@H](CC=C(C)C)[C@@]1(C)CCC=C(C)C)C2=O)CC=C(C)C,CC1OC(CC(O)C1O)OC1CC(OC(C1)C1CCC2(C)C(CCC3C2CCC2(C)C(CC(O)C32O)C2=CC(=O)OC2)C1)OC1CC(O)C(OC2CC(O)C(O)C(C)O2)C(C)O1,1,P-gp induction,15492760
+hyperforin,tacrolimus,CC(C)C(=O)[C@@]12C(=O)C(=C(O)[C@@](CC=C(C)C)(C[C@H](CC=C(C)C)[C@@]1(C)CCC=C(C)C)C2=O)CC=C(C)C,C/C=C/C[C@@H](C)/C=C(\C)[C@@H]1C[C@H](OC)CC[C@]1(O)C(=O)[C@@H]1N(CCCC1)C(=O)[C@@H]1[C@@H](O)C[C@@](O)(C(=O)C(=O)N2CCCC[C@H]2C(=O)O[C@H](/C(C)=C/[C@@H]3CC[C@@H](O)[C@H](OC)C3)[C@H](C)[C@@H](O)CC1=O)O1,1,CYP3A4/P-gp induction,10233198
+hyperforin,saquinavir,CC(C)C(=O)[C@@]12C(=O)C(=C(O)[C@@](CC=C(C)C)(C[C@H](CC=C(C)C)[C@@]1(C)CCC=C(C)C)C2=O)CC=C(C)C,CC(C)(C)NC(=O)[C@@H]1CC2=CC=CC=C2C[N]1CC(O)C(CC1=CC=CC=C1)NC(=O)C(CC(=O)N)NC(=O)C1=NC2=CC=CC=C2C=C1,1,CYP3A4/P-gp induction,11054593
+bergamottin,midazolam,CC(=CCCCC(=CC(=O)Oc1ccc2ccc(=O)oc2c1)C)C,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,grapefruit furanocoumarin: CYP3A4 MBI,10646540
+bergamottin,simvastatin,CC(=CCCCC(=CC(=O)Oc1ccc2ccc(=O)oc2c1)C)C,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C12,1,CYP3A4 MBI,10646540
+bergamottin,felodipine,CC(=CCCCC(=CC(=O)Oc1ccc2ccc(=O)oc2c1)C)C,CCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc(Cl)c1Cl,1,CYP3A4 MBI,8632207
+berberine,cyclosporine,[O-]C1=CC2=C(C=C1OC)[C+]=C1[N](CC2)C=C2C=C3OCOC3=CC2=C1,C/C=C/C[C@@H](C)[C@@H](O)[C@H]1C(=O)N[C@@H](CC)C(=O)N(C)CC(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)N1C,1,CYP3A4/P-gp inhibition,17885078
+berberine,midazolam,[O-]C1=CC2=C(C=C1OC)[C+]=C1[N](CC2)C=C2C=C3OCOC3=CC2=C1,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,CYP3A4 inhibition,17885078
+curcumin,tamoxifen,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,CC/C(=C(\c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,1,CYP2D6/3A4 inhibition,20726692
+curcumin,warfarin,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,CYP2C9 inhibition,21184613
+curcumin,midazolam,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,CYP3A4 inhibition,21184613
+piperine,midazolam,O=C(/C=C/C=C/c1ccc2OCOc2c1)N1CCCCC1,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,CYP3A4 inhibition,12920167
+piperine,tacrolimus,O=C(/C=C/C=C/c1ccc2OCOc2c1)N1CCCCC1,C/C=C/C[C@@H](C)/C=C(\C)[C@@H]1C[C@H](OC)CC[C@]1(O)C(=O)[C@@H]1N(CCCC1)C(=O)[C@@H]1[C@@H](O)C[C@@](O)(C(=O)C(=O)N2CCCC[C@H]2C(=O)O[C@H](/C(C)=C/[C@@H]3CC[C@@H](O)[C@H](OC)C3)[C@H](C)[C@@H](O)CC1=O)O1,1,CYP3A4/P-gp inhibition,16522569
+piperine,verapamil,O=C(/C=C/C=C/c1ccc2OCOc2c1)N1CCCCC1,COc1ccc(CCN(C)CCCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,1,P-gp inhibition,16522569
+quercetin,cyclosporine,O=C1c2c(O)cc(O)cc2OC(c2ccc(O)c(O)c2)=C1O,C/C=C/C[C@@H](C)[C@@H](O)[C@H]1C(=O)N[C@@H](CC)C(=O)N(C)CC(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)N1C,1,CYP3A4/P-gp,17885078
+quercetin,warfarin,O=C1c2c(O)cc(O)cc2OC(c2ccc(O)c(O)c2)=C1O,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,CYP2C9/3A4 inhibition,19590754
+quercetin,tamoxifen,O=C1c2c(O)cc(O)cc2OC(c2ccc(O)c(O)c2)=C1O,CC/C(=C(\c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,1,CYP2D6/3A4 inhibition,15155551
+egcg,saquinavir,OC1=CC(O)=C2C[C@@H](OC(=O)c3cc(O)c(O)c(O)c3)[C@@H](Oc2c1)c1cc(O)c(O)c(O)c1,CC(C)(C)NC(=O)[C@@H]1CC2=CC=CC=C2C[N]1CC(O)C(CC1=CC=CC=C1)NC(=O)C(CC(=O)N)NC(=O)C1=NC2=CC=CC=C2C=C1,1,P-gp inhibition,19590754
+egcg,tamoxifen,OC1=CC(O)=C2C[C@@H](OC(=O)c3cc(O)c(O)c(O)c3)[C@@H](Oc2c1)c1cc(O)c(O)c(O)c1,CC/C(=C(\c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,1,CYP3A4/2D6 inhibition,19590754
+silibinin,cyclosporine,O=C1C(O)C(c2cc(O)c(O)c(OC)c2)Oc2cc(O)cc(O)c21,C/C=C/C[C@@H](C)[C@@H](O)[C@H]1C(=O)N[C@@H](CC)C(=O)N(C)CC(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](CC(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)N1C,1,CYP3A4/P-gp,17885078
+silibinin,warfarin,O=C1C(O)C(c2cc(O)c(O)c(OC)c2)Oc2cc(O)cc(O)c21,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,CYP2C9 inhibition,16988655
+resveratrol,warfarin,Oc1ccc(/C=C/c2cc(O)cc(O)c2)cc1,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,CYP2C9/3A4 inhibition,21051388
+resveratrol,tamoxifen,Oc1ccc(/C=C/c2cc(O)cc(O)c2)cc1,CC/C(=C(\c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,1,CYP3A4/2D6,21051388
+allicin,saquinavir,CC=CSS(=O)CC=C,CC(C)(C)NC(=O)[C@@H]1CC2=CC=CC=C2C[N]1CC(O)C(CC1=CC=CC=C1)NC(=O)C(CC(=O)N)NC(=O)C1=NC2=CC=CC=C2C=C1,1,garlic allicin: CYP3A4 inhibition,11999079
+schisantherin_a,tacrolimus,COC1=C(OC)C2=CC3=C(OC(=O)c4ccccc4)C(C)C(C)[C@@](C)(O)Cc4cc(OC)c(OC)c(OC)c4-c4cc3cc4OC(=O)c1=2,C/C=C/C[C@@H](C)/C=C(\C)[C@@H]1C[C@H](OC)CC[C@]1(O)C(=O)[C@@H]1N(CCCC1)C(=O)[C@@H]1[C@@H](O)C[C@@](O)(C(=O)C(=O)N2CCCC[C@H]2C(=O)O[C@H](/C(C)=C/[C@@H]3CC[C@@H](O)[C@H](OC)C3)[C@H](C)[C@@H](O)CC1=O)O1,1,Schisandra lignan: CYP3A4 inhibition,20486332
+glycyrrhetinic_acid,midazolam,CC12CCC(=O)C(C)(C)C1CCC1(C)C2CC(=O)C2(C)C(C(=O)O)(CCC12C)C=C(C)C,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,licorice: CYP3A4 inhibition,20486332
+ginsenoside_rb1,midazolam,CC(C)=CCCC(C)(O)[C@@H]1CC[C@@]2(C)[C@@H]1[C@H](O)C[C@@H]1[C@@]2(C)CC[C@@H]2[C@@]1(C)CC[C@@H](O[C@@H]1O[C@H](CO[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)[C@@H](O)[C@H](O)[C@H]1O[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O)C2(C)C,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,ginseng: CYP3A4 inhibition,19364376
+ginsenoside_rb1,warfarin,CC(C)=CCCC(C)(O)[C@@H]1CC[C@@]2(C)[C@@H]1[C@H](O)C[C@@H]1[C@@]2(C)CC[C@@H]2[C@@]1(C)CC[C@@H](O[C@@H]1O[C@H](CO[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)[C@@H](O)[C@H](O)[C@H]1O[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O)C2(C)C,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,ginseng: CYP2C9 interaction,15681991
+kavain,midazolam,COC1=CC(=O)O[C@@H](C1)/C=C/c1ccccc1,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,kava: CYP3A4 inhibition,15711540
+kavain,warfarin,COC1=CC(=O)O[C@@H](C1)/C=C/c1ccccc1,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,kava: CYP2C9 inhibition,15711540
+echinacoside,midazolam,OCC1OC(OCC2OC(OC(=O)/C=C/c3ccc(O)c(O)c3)C(O)C(O)C2OC3OC(C)C(O)C(O)C3O)C(O)C(O)C1O,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,echinacea: CYP3A4 modulation,15282211
+glabridin,midazolam,CC1(C)Oc2cc(O)ccc2[C@H]2COc3cc(O)ccc3[C@H]12,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,licorice glabridin: CYP3A4/2B6 MBI,14978199
+andrographolide,midazolam,CC12CCC(O)C(CO)(C)C1CCC1(C)C(=CC(=O)OC1)CC2=C,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,Andrographis: CYP3A4 inhibition,20486332
+bilobalide,midazolam,CC12CC3OC(=O)C1C(O)C1(C(C)(C)C)OC(=O)C3(O1)C2=O,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,ginkgo bilobalide: CYP3A4,20486332
+baicalein,tamoxifen,O=C1C=C(c2ccccc2)Oc2cc(O)c(O)c(O)c21,CC/C(=C(\c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,1,Scutellaria: CYP1A2 inhibition,19590754
+diosmin,diltiazem,COc1ccc(C2=CC(=O)c3c(O)cc(OC4OC(CO)C(O)C(O)C4OC4OC(C)C(O)C(O)C4O)cc3O2)cc1O,CC(=O)OC1C(=O)N(CCN(C)C)c2ccccc2SC1c1ccc(OC)cc1,1,diosmin: CYP3A4,19590754
+naringenin,felodipine,O=C1C[C@H](c2ccc(O)cc2)Oc2cc(O)cc(O)c21,CCOC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1cccc(Cl)c1Cl,1,CYP3A4 inhibition,8632207
+hesperidin,midazolam,COc1ccc([C@H]2CC(=O)c3c(O)cc(OC4OC(COC5OC(C)C(O)C(O)C5O)C(O)C(O)C4O)cc3O2)cc1O,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,hesperidin: CYP3A4,21051388
+genistein,warfarin,O=C1c2cc(O)ccc2OC=C1c1ccc(O)cc1,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,soy isoflavone: CYP2C9,21051388
+apigenin,simvastatin,O=C1C=C(c2ccc(O)cc2)Oc2cc(O)cc(O)c21,CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C12,1,CYP3A4,21051388
+emodin,warfarin,OC1=C(C(=O)c2cc(C)cc(O)c2C1=O)O,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,CYP2C9,21051388
+chrysin,tamoxifen,O=C1C=C(c2ccccc2)Oc2cc(O)cc(O)c21,CC/C(=C(\c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,1,CYP2D6,21051388
+luteolin,tamoxifen,O=C1C=C(c2ccc(O)c(O)c2)Oc2cc(O)cc(O)c21,CC/C(=C(\c1ccccc1)c1ccc(OCCN(C)C)cc1)c1ccccc1,1,CYP2D6/3A4,21051388
+icariin,warfarin,CC(C)=CCc1c(O)cc(OC2OC(CO)C(O)C(O)C2O)c2c(=O)c(OC3OC(C)C(O)C(O)C3O)c(-c3ccc(OC)cc3)oc1-2,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,Epimedium icariin: CYP2C9,21051388
+tanshinone_iia,warfarin,CC1=COC2=C1C(=O)C(=O)c1c-2c2CCCC(C)(C)c2cc1C,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,Salvia tanshinone: CYP2C9/1A2,20486332
+cryptotanshinone,warfarin,CC1COC2=C1C(=O)C(=O)c1c-2c2CCCC(C)(C)c2cc1C,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,Salvia: CYP2C9,20486332
+magnolol,warfarin,Oc1ccc(CC=C)cc1-c1cc(CC=C)ccc1O,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,Magnolia: CYP2C9,20486332
+honokiol,warfarin,Oc1ccc(CC=C)cc1-c1ccc(CC=C)cc1O,CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,1,Magnolia: CYP2C9,20486332
+sulforaphane,midazolam,C[S](=O)CCCCN=C=S,CC1=C2CN=C(c3ccccc3F)c3cc(Cl)ccc3-n2cn1,1,broccoli: CYP3A4 induction/inhibition,21051388

@@ -1,0 +1,189 @@
+[
+  {
+    "file": "data/frozen/cyp_atlas_full.csv",
+    "purpose": "Predicted CYP-inhibition atlas over IMPPAT (17,963 compounds)",
+    "sha256": "fcfdf1eece65ac9fa9e2a31d3f7dc1bff40a0c16dcde9b7756fc548b24928e8c",
+    "bytes": 2243649,
+    "rows": 17963,
+    "columns": 8,
+    "source": "IMPPAT 2.0 structures scored by CYP-Atlas models",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/atlas.py"
+  },
+  {
+    "file": "data/frozen/cyp_atlas_domain.csv",
+    "purpose": "Atlas with max_train_tanimoto + in_domain_040 flags",
+    "sha256": "3db1289badccbbac4a37972f98abcac5a4848630d751bd4fe9bb2abc641bba06",
+    "bytes": 2384251,
+    "rows": 17963,
+    "columns": 10,
+    "source": "cyp_atlas.csv + Tanimoto-to-training (ECFP4 2048-bit)",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/domain_v2.py"
+  },
+  {
+    "file": "data/frozen/cyp_atlas_indomain.csv",
+    "purpose": "Primary deliverable: AD-filtered atlas (Tanimoto >= 0.40)",
+    "sha256": "3c3f7718b50a5f0fad3d255842121cb411bb61d8b48cd993816d2668ae467676",
+    "bytes": 363178,
+    "rows": 2834,
+    "columns": 10,
+    "source": "Subset of cyp_atlas_domain.csv",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/domain_v2.py"
+  },
+  {
+    "file": "data/frozen/cyp_labels_T10.csv",
+    "purpose": "CYP + P-gp training labels at IC50 <= 10 uM",
+    "sha256": "3afc8669b9975d307fd2d1609a39fc6cd6879418564374389cc0996f7cbdf978",
+    "bytes": 1017583,
+    "rows": 14637,
+    "columns": 7,
+    "source": "ChEMBL v34 bioactivity",
+    "source_version_date": "ChEMBL v34; retrieved 2026",
+    "processing_script": "cyp-atlas/src/fetch_cyp.py (or fetch_cyp_v2.py --threshold-um 10)"
+  },
+  {
+    "file": "data/frozen/drug_cyp.csv",
+    "purpose": "Drug -> CYP/P-gp route lookup",
+    "sha256": "a75e8ea60012b34a6a8acb15ba77b7f945d886b911f53e55a9aa425a22204b74",
+    "bytes": 282,
+    "rows": 13,
+    "columns": 2,
+    "source": "manually curated",
+    "source_version_date": "generated 2026",
+    "processing_script": "static"
+  },
+  {
+    "file": "data/frozen/hdi_seed_original.csv",
+    "purpose": "Original curated HDI seed (12 constituents, 13 drugs, 55 pairs)",
+    "sha256": "9e7f281a4f12dd5bd1ef4b9ee9fec083971ac962a345618308d2edfc612e85a4",
+    "bytes": 13558,
+    "rows": 55,
+    "columns": 7,
+    "source": "literature-curated with PMIDs",
+    "source_version_date": "generated 2026",
+    "processing_script": "static"
+  },
+  {
+    "file": "data/frozen/hdi_seed_expanded.csv",
+    "purpose": "Expanded curated HDI seed (32 constituents, 50 pairs)",
+    "sha256": "6957c6fb47df42239888a32c07c42762e160e4fb6cfa6d16f8b748d48fce3028",
+    "bytes": 9368,
+    "rows": 51,
+    "columns": 7,
+    "source": "literature-curated with PMIDs; includes distant-from-training chemistry",
+    "source_version_date": "generated 2026",
+    "processing_script": "static"
+  },
+  {
+    "file": "data/frozen/metrics_full.csv",
+    "purpose": "CYP OOF metrics with CI, PR-AUC, MCC, sens/spec, Brier",
+    "sha256": "92da5d727bf3dd1dbc875327573af797389e11533645ecb93f98b5da069fe741",
+    "bytes": 407,
+    "rows": 5,
+    "columns": 10,
+    "source": "revision_analysis.py / revision_v2.py",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/revision_analysis.py"
+  },
+  {
+    "file": "data/frozen/metrics_threshold.csv",
+    "purpose": "CYP AUROC at IC50 thresholds 1/5/10 uM (sensitivity analysis)",
+    "sha256": "e19d8d26500d9dc8a44ec7b734f1bd5bd980a76b00f8c95db77846d987c608ba",
+    "bytes": 749,
+    "rows": 15,
+    "columns": 7,
+    "source": "revision_v2.py block A",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/revision_v2.py"
+  },
+  {
+    "file": "data/frozen/pgp_inhibitor_only.csv",
+    "purpose": "P-gp model restricted to inhibition assays (assay_type=B)",
+    "sha256": "e439a6aeca2e51adbeecc2612d5f301e811e282e6fa7663292cf205243ad6355",
+    "bytes": 98,
+    "rows": 1,
+    "columns": 6,
+    "source": "fetch_cyp_v2.py + revision_v2.py block E",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/revision_v2.py"
+  },
+  {
+    "file": "data/frozen/ad_sweep.csv",
+    "purpose": "In-domain fraction across Tanimoto cutoffs 0.20..0.50",
+    "sha256": "945799e193823d205d16aa85a65556c078ff877391eea76d8c0e1a2be2daff4f",
+    "bytes": 223,
+    "rows": 5,
+    "columns": 5,
+    "source": "domain_v2.py",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/domain_v2.py"
+  },
+  {
+    "file": "data/frozen/hdi_negsample_robustness.csv",
+    "purpose": "HDI AUROC under 3 negative-sampling strategies (bootstrap CI)",
+    "sha256": "304c2e9f7999a9340024a50c3ba851eea747fa4d386c5f748a9beec2409a8e47",
+    "bytes": 218,
+    "rows": 3,
+    "columns": 7,
+    "source": "revision_v2.py block B",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/revision_v2.py"
+  },
+  {
+    "file": "data/frozen/hdi_distant_only.csv",
+    "purpose": "HDI AUROC on constituents with Tanimoto<0.4 to training",
+    "sha256": "7f472001c57134e0a0f4ccf9effa58b1a1ae08fc657f273bec3cfadf4b20c466",
+    "bytes": 264,
+    "rows": 3,
+    "columns": 8,
+    "source": "revision_v2.py block C",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/revision_v2.py"
+  },
+  {
+    "file": "data/frozen/hdi_route_weighted.csv",
+    "purpose": "HDI AUROC under max vs mean route-aggregation rules",
+    "sha256": "8ae81ef7559f6cbe88336b168a1deb219fce0dfb1e12c92ea5db731f7d3794d4",
+    "bytes": 86,
+    "rows": 2,
+    "columns": 4,
+    "source": "revision_v2.py block D",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/revision_v2.py"
+  },
+  {
+    "file": "data/frozen/validate_overall.csv",
+    "purpose": "Headline HDI validation (3 strategies x 2 rules, PGP route included)",
+    "sha256": "b07e8510e11fcade14d5b1cb14cf93f3856faee946d505b2c8b8f784bc16c90e",
+    "bytes": 388,
+    "rows": 6,
+    "columns": 8,
+    "source": "validate_available.py",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/validate_available.py"
+  },
+  {
+    "file": "data/frozen/validate_per_isoform.csv",
+    "purpose": "Per-isoform subset AUROC (isoform-only scoring)",
+    "sha256": "918b305a6feec71adfdc9dbefb4689888b6027f52245fb03074f85c2085a6437",
+    "bytes": 192,
+    "rows": 5,
+    "columns": 5,
+    "source": "validate_available.py",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/validate_available.py"
+  },
+  {
+    "file": "data/frozen/validate_per_drug.csv",
+    "purpose": "Per-drug ranking AUROC inside each drug",
+    "sha256": "c7f430f8ff1836a900c4e016f6b13db3e3a7fb1a30d2578a0caa0657127b843a",
+    "bytes": 2123,
+    "rows": 60,
+    "columns": 6,
+    "source": "validate_available.py",
+    "source_version_date": "generated 2026",
+    "processing_script": "cyp-atlas/src/validate_available.py"
+  }
+]

@@ -1,0 +1,9 @@
+torch
+torch-geometric
+rdkit
+pandas
+scikit-learn
+numpy
+# GPU: install the CUDA build of torch first from https://pytorch.org, then the rest.
+# Core PyG layers (GCNConv) need no compiled extensions; leave torch-scatter/sparse out unless a layer asks for them.
+matplotlib

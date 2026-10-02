@@ -1,0 +1,5 @@
+rdkit
+scikit-learn
+numpy
+matplotlib
+# fetch_cyp.py uses stdlib urllib — no extra dep. GPU not needed (RF, CPU).

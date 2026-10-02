@@ -1,0 +1,2 @@
+endpoint,n,positives,AUROC,AUROC_95CI,PR_AUC
+PGP_inhibitor_only,884,661,0.903,0.880-0.924,0.962

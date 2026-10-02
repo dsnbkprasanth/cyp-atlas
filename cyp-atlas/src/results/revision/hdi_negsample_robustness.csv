@@ -1,0 +1,4 @@
+negative_strategy,n_pos,n_neg,AUROC,AUROC_95CI,PR_AUC,p_MannWhitney_pos>neg
+random,24,21,0.614,0.443-0.777,0.654,0.0969
+scaffold,24,21,0.614,0.437-0.772,0.654,0.0969
+dissimilar,24,21,0.614,0.439-0.773,0.654,0.0969

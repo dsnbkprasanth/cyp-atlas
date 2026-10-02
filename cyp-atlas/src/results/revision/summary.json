@@ -1,0 +1,10 @@
+{
+  "positive_pairs": 55,
+  "negative_pairs": 55,
+  "unique_constituents": 12,
+  "unique_drugs": 13,
+  "curated_positive_total": 55,
+  "exact": 7,
+  "near": 2,
+  "distant": 3
+}
